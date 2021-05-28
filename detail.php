@@ -57,7 +57,7 @@
         <ul class="nav">
         <li class="nav-item">
           <a class="nav-link" onclick="history.back()">
-            <img src="asset/icon/arrow-left-square.svg">
+            <img src="asset/icons/arrow-left-square.svg">
           </a>
         </li>
         </ul>

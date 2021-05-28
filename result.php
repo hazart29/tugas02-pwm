@@ -1,16 +1,20 @@
+#menerima data hasil submit dari index lalu mengirimkan ke fungsi shortcuttly
 <?php
 if (isset($_GET['submit'])) {
-    $url = $_GET['url'];
-    shortcuttly($url);
+    $url = $_GET['url']; #mengambil
+    shortcuttly($url); #mengirimkan
 }
 
+#fungsi shortcuttly untuk mengirim dan menerima request api
 function shortcuttly($url)
 {
-  $a = $url;
-  $longUrl = urlencode($a);
+  $a = $url; #menyimpan url input
+  $longUrl = urlencode($a); #encode url
+  #requst ke api
   $json = file_get_contents("https://cutt.ly/api/api.php?key=9f523dd389e19df88986ad27419a4385b7a0e&short=$longUrl");
-  $data = json_decode($json, true);
+  $data = json_decode($json, true); #decode data hasil request
 
+  #menyimpan data hasil decode ke variabel
   $status = $data["url"]["status"];
   $fullLink = $data["url"]["fullLink"];
   $date = $data["url"]["date"];
@@ -19,6 +23,7 @@ function shortcuttly($url)
 
   if ($json) {
 ?>
+    <!-- menampilkan data hasil konversi dari cuttly -->
     <div class="card bg-dark border-0">
       <div class="card-header border-0">
         Berhasil membuat shortlink!
