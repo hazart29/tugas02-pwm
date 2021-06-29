@@ -7,6 +7,7 @@
   <title>Zartshrt link</title>
   <link rel="stylesheet" href="asset/css/bootstrap.css" type="text/css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- set favicon untuk website -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
   <style type="text/css">
